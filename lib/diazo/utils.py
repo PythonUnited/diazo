@@ -74,7 +74,7 @@ class LoggingXSLTWrapper:
 
 
 def pkg_parse(name, parser=None):
-    with open(pkg_resources.resource_filename('diazo', name)) as f:
+    with open(pkg_resources.resource_filename('diazo', name), 'r') as f:
         return etree.parse(f, parser=parser)
 
 

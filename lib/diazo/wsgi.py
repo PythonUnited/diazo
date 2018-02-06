@@ -176,7 +176,7 @@ class XSLTMiddleware(object):
         self.global_conf = global_conf
 
         if filename is not None:
-            xslt_file = open(filename)
+            xslt_file = open(filename, 'r')
             source = xslt_file.read()
             tree = etree.fromstring(source)
             xslt_file.close()
